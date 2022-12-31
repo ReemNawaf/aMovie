@@ -41,6 +41,20 @@
 </head>
 <body>
   <script>
+import { initializeApp } from "firebase/app";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAIbuor7fF6rYL5AtR6cDlp5q0aOzeZIzA",
+  authDomain: "amovie-a161c.firebaseapp.com",
+  projectId: "amovie-a161c",
+  storageBucket: "amovie-a161c.appspot.com",
+  messagingSenderId: "544854759441",
+  appId: "1:544854759441:web:26201064f76dba6dce39b0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
