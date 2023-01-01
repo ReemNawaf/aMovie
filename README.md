@@ -1,20 +1,25 @@
 <p align="center">
   
-  <img src="assets/logo/logo.png" alt="Logo" width=72 height=72>
+  <img src="assets/logo/logo.png" alt="Logo" width=150 height=150>
   
   <h3 align="center">Invitation Generator</h3>
 
   <p align="center">
     a flutter app to explore movies :purple_heart::fire:.
     <br>
-    <b>Contains</b>: see (treding, upcoming, now playing) movies, filter movies by genre, add/remove movies to/from favorite/watching list, besides search movies.
+    <br>
+    <b>Contains</b>: see (treding, upcoming, now playing) movies, filter movies by genre,
+    <br>
+    add/remove movies to/from favorite/watching list, besides search movies.
+    <br>
     <br>
     <b>Uses</b>: Riverpod as a state management solution.
+    <br>
     <br>
     <em>(Submited as a part of Okoul Challenge in)</em>
     <br>
     <a href="https://twitter.com/ReemNawaf">Twitter</a>
-    ·
+    •
     <a href="https://www.linkedin.com/in/reemnawaf/">LinkedIn</a>
   </p>
 </p>
@@ -31,8 +36,28 @@ This is a normal flutter app. You should follow the instructions in the [officia
 
 
 ## Screenshots
-<div align="center">
+| Home Page | User Profile | User Profile | Movies Page By Genres |
+| ----------- | ----------- | ----------- | ----------- |
+|<img src="assets/screenshots/1.png" width="250">|<img src="assets/screenshots/2.png" width="250">|<img src="assets/screenshots/3.png" width="250">|<img src="assets/screenshots/4.png" width="250">|
+
+| Animation Movies | Movie Details Page | Movie Trailer Page | Add Movie To Favorite List |
+| ----------- | ----------- | ----------- | ----------- |
+|<img src="assets/screenshots/5.png" width="250">|<img src="assets/screenshots/6.png" width="250">|<img src="assets/screenshots/7.png" width="250">|<img src="assets/screenshots/8.png" width="250">|
+
+| Add Movie To Watching List | Watching List | Favorite Movie List | Actor Details Page |
+| ----------- | ----------- | ----------- | ----------- |
+| <img src="assets/screenshots/9.png" width="250">|<img src="assets/screenshots/11.png" width="250">|<img src="assets/screenshots/10.png" width="250">|<img src="assets/screenshots/12.png" width="250">|
+
+| Cast & Similar Movies Sections | Review Section | Search For Movies Page | Search For Movies Page |
+| ----------- | ----------- | ----------- | ----------- |
+|<img src="assets/screenshots/13.png" width="250">|<img src="assets/screenshots/14.png" width="250">|<img src="assets/screenshots/15.png" width="250">|<img src="assets/screenshots/16.png" width="250">
+
+
+
+
+<!-- <div align="center">
   <div class="row">
+    ### Profle Page
     <img src="assets/screenshots/1.png" alt="Screenshot_1" style="width:20%">
     <img src="assets/screenshots/2.png" alt="Screenshot_2" style="width:20%">
     <img src="assets/screenshots/3.png" alt="Screenshot_3" style="width:20%">
@@ -60,7 +85,7 @@ This is a normal flutter app. You should follow the instructions in the [officia
     <img src="assets/screenshots/16.png" alt="Screenshot_16" style="width:20%">
   </div>
   
-</div>
+</div> -->
 
 ## What next?
 * I might add a recommendation system to filter movies according to user preferences.
