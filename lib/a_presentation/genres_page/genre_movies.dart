@@ -68,7 +68,6 @@ class GenreMovies extends ConsumerWidget {
         ),
       ),
     );
-    ;
   }
 
   Widget _buildMoviesByGenreWidget(

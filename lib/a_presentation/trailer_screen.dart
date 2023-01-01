@@ -70,7 +70,6 @@ class TrailersScreen extends ConsumerWidget {
         ),
       ),
     );
-    ;
   }
 
   Widget _buildTrailersWidget(TrailersModel data, BuildContext context) {

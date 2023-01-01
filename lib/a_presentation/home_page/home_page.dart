@@ -5,7 +5,6 @@ import 'package:a_movie/a_presentation/home_page/widgets/trending_movies.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
-import 'package:app_installer/app_installer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,9 +16,6 @@ class HomePage extends StatelessWidget {
       decoration: kBackgroundDec,
       child: ListView(
         children: [
-          IconButton(
-              onPressed: () => AppInstaller.installApk('app-debug.apk'),
-              icon: Text('ddd')),
           const MainAppBar(),
           const CategoryWidget(),
           const TredingMoviesWidget(),

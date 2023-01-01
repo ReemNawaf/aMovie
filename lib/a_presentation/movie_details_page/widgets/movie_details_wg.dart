@@ -1,4 +1,3 @@
-import 'package:a_movie/a_presentation/core/widgets/simple_app_bar.dart';
 import 'package:a_movie/a_presentation/movie_details_page/widgets/movie_actions_row.dart';
 import 'package:a_movie/a_presentation/movie_details_page/widgets/movie_cast_wg.dart';
 import 'package:a_movie/a_presentation/movie_details_page/widgets/movie_genres_wg.dart';
@@ -10,7 +9,6 @@ import 'package:a_movie/a_presentation/movie_details_page/widgets/reviews.dart';
 import 'package:a_movie/c_domain/movie/movie_details_model.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/txt_style.dart';
-import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
 
 class MovieDetailsWidget extends StatelessWidget {
@@ -44,7 +42,7 @@ class MovieDetailsWidget extends StatelessWidget {
                       fullImageURL: movie.details!.fullImgURL,
                     ),
                     SizedBox(
-                      height: size.height * 0.4,
+                      height: size.height * 0.42,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

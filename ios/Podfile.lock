@@ -1,6 +1,4 @@
 PODS:
-  - app_installer (1.1.0):
-    - Flutter
   - Flutter (1.0.0)
   - flutter_inappwebview (0.0.1):
     - Flutter
@@ -14,7 +12,6 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - app_installer (from `.symlinks/plugins/app_installer/ios`)
   - Flutter (from `Flutter`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
   - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
@@ -24,8 +21,6 @@ SPEC REPOS:
     - OrderedSet
 
 EXTERNAL SOURCES:
-  app_installer:
-    :path: ".symlinks/plugins/app_installer/ios"
   Flutter:
     :path: Flutter
   flutter_inappwebview:
@@ -34,7 +29,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_ios/ios"
 
 SPEC CHECKSUMS:
-  app_installer: 4301996bd8f3c6f75776416b8885a6d92928306f
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c

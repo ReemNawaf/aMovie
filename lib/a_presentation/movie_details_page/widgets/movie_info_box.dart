@@ -26,7 +26,7 @@ class MovieInfoBox extends StatelessWidget {
         border: Border.all(color: kWhiteColor),
       ),
       width: size.width * 0.2,
-      height: size.width * 0.2,
+      height: size.width * 0.21,
       child: Column(
         children: [
           SvgPicture.asset('assets/icons/$icon.svg'),

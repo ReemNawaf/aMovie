@@ -33,7 +33,7 @@ class SavedMoviesPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * 0.76,
+                height: size.height * 0.75,
                 width: size.width * 0.9,
                 child: TabBarView(
                   children: [

@@ -126,7 +126,7 @@ class RatingGenresLine extends ConsumerWidget {
           if (snapshot.connectionState == ConnectionState.done &&
               snapshot.hasData) {
             return Text(
-              '$rating  •  ${snapshot.data!.first}',
+              '${rating.toStringAsFixed(2)}  •  ${snapshot.data!.first}',
               style: kCaption1Style.copyWith(color: kBlackColors[600]),
             );
           } else {

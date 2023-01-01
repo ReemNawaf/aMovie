@@ -1,5 +1,4 @@
 import 'package:a_movie/shared/app_colors.dart';
-import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:a_movie/c_domain/genres/genres_model.dart';
 import 'package:a_movie/a_presentation/genres_page/genre_movies.dart';

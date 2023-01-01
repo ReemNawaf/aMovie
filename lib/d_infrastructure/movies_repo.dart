@@ -6,7 +6,6 @@ import 'package:a_movie/c_domain/movie/movie_details_model.dart';
 import 'package:a_movie/c_domain/movie/movie_model.dart';
 import 'package:a_movie/c_domain/reviews_model.dart';
 import 'package:a_movie/c_domain/trailers_model.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 //  get Now Playing Movies
 //  get Up cominging Movies

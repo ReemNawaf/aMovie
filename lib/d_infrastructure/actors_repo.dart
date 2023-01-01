@@ -10,7 +10,6 @@ class ActorRepo {
   static String getActorUrl = "$mainUrl/person";
 
   Future<ActorDetailsModel> getActorDetails(int id) async {
-    print(id);
     var params = {
       "api_key": _environmentConfig.movieAPIKey,
       "language": "en-us"

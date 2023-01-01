@@ -78,7 +78,6 @@ class Reviews extends ConsumerWidget {
         ),
       ),
     );
-    ;
   }
 
   Widget _buildReviewsWidget({required Size size, required ReviewsModel data}) {

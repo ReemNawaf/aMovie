@@ -1,4 +1,3 @@
-import 'package:a_movie/a_presentation/movie_details_page/page_builders.dart';
 import 'package:a_movie/c_domain/movie/hive_movie_model.dart';
 import 'package:a_movie/c_domain/user/hive_model.dart';
 import 'package:a_movie/shared/app_colors.dart';
