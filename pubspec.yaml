@@ -10,7 +10,6 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-
   dio: ^4.0.6
   flutter:
     sdk: flutter
@@ -21,6 +20,7 @@ dependencies:
   hive_flutter: ^1.1.0
   hive_generator: ^2.0.0
   page_indicator: ^0.4.1
+  url_launcher: ^6.1.7
   youtube_player_flutter: ^8.1.1
 
 dev_dependencies:
@@ -33,7 +33,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: 'assets/logo/logo.png'
+  image_path: "assets/logo/logo.png"
 
 flutter:
   uses-material-design: true

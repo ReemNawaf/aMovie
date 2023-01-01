@@ -1,7 +1,9 @@
 import 'package:a_movie/a_presentation/core/widgets/simple_app_bar.dart';
+import 'package:a_movie/a_presentation/core/widgets/web_app_ground.dart';
 import 'package:a_movie/a_presentation/home_page/widgets/movie_card_skeleton_wg.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
@@ -19,32 +21,38 @@ class GenresPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.only(top: 60.0),
-        decoration: kBackgroundDec,
-        child: Column(
-          children: [
-            const SimpleAppBar(title: 'Explore Movies By Genres'),
-            FutureBuilder<GenreModel>(
-              future: ref.read(movieRepoProvider).getGenres(),
-              builder: (context, AsyncSnapshot<GenreModel> snapshot) {
-                if (snapshot.hasData) {
-                  if (snapshot.data!.error != null &&
-                      snapshot.data!.error!.isNotEmpty) {
-                    return _buildErrorWidget(snapshot.data!.error);
-                  } else {
-                    return _buildGetGenresWidget(
-                        data: snapshot.data!,
-                        selectedGenreIndex: selectedGenreIndex);
-                  }
-                } else if (snapshot.hasError) {
-                  return _buildErrorWidget(snapshot.error);
-                } else {
-                  return _buildLoadingWidget(size);
-                }
-              },
+      body: WebAppGround(
+        child: SizedBox(
+          width: screenWidth(size),
+          height: screenHeight(size),
+          child: Container(
+            padding: const EdgeInsets.only(top: 60.0),
+            decoration: kBackgroundDec,
+            child: Column(
+              children: [
+                const SimpleAppBar(title: 'Explore Movies By Genres'),
+                FutureBuilder<GenreModel>(
+                  future: ref.read(movieRepoProvider).getGenres(),
+                  builder: (context, AsyncSnapshot<GenreModel> snapshot) {
+                    if (snapshot.hasData) {
+                      if (snapshot.data!.error != null &&
+                          snapshot.data!.error!.isNotEmpty) {
+                        return _buildErrorWidget(snapshot.data!.error);
+                      } else {
+                        return _buildGetGenresWidget(
+                            data: snapshot.data!,
+                            selectedGenreIndex: selectedGenreIndex);
+                      }
+                    } else if (snapshot.hasError) {
+                      return _buildErrorWidget(snapshot.error);
+                    } else {
+                      return _buildLoadingWidget(size);
+                    }
+                  },
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

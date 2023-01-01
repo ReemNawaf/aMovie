@@ -1,5 +1,7 @@
+import 'package:a_movie/a_presentation/core/widgets/web_app_ground.dart';
 import 'package:a_movie/a_presentation/search_movies_page/search_movies_page.dart';
 import 'package:a_movie/a_presentation/saved_movies_page/saved_movies_page.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
 import 'package:a_movie/shared/app_colors.dart';
@@ -31,9 +33,16 @@ class _TabPageState extends State<TabPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: kBlackColors,
-      body: pages[selectedPageIndex],
+      body: WebAppGround(
+        child: SizedBox(
+          width: screenWidth(screenSize),
+          height: screenHeight(screenSize),
+          child: pages[selectedPageIndex],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: kBlackColors,
         selectedItemColor: kPrimaryColors,
