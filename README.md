@@ -44,48 +44,14 @@ This is a normal flutter app. You should follow the instructions in the [officia
 | ----------- | ----------- | ----------- | ----------- |
 |<img src="assets/screenshots/5.png" width="250">|<img src="assets/screenshots/6.png" width="250">|<img src="assets/screenshots/7.png" width="250">|<img src="assets/screenshots/8.png" width="250">|
 
-| Add Movie To Watching List | Watching List | Favorite Movie List | Actor Details Page |
+| Add Movie To Watching List | Favorite Movie List | Actor Details Page | Watching List |
 | ----------- | ----------- | ----------- | ----------- |
-| <img src="assets/screenshots/9.png" width="250">|<img src="assets/screenshots/11.png" width="250">|<img src="assets/screenshots/10.png" width="250">|<img src="assets/screenshots/12.png" width="250">|
+| <img src="assets/screenshots/9.png" width="250">|<img src="assets/screenshots/10.png" width="250">|<img src="assets/screenshots/11.png" width="250">|<img src="assets/screenshots/12.png" width="250">|
 
 | Cast & Similar Movies Sections | Review Section | Search For Movies Page | Search For Movies Page |
 | ----------- | ----------- | ----------- | ----------- |
 |<img src="assets/screenshots/13.png" width="250">|<img src="assets/screenshots/14.png" width="250">|<img src="assets/screenshots/15.png" width="250">|<img src="assets/screenshots/16.png" width="250">
 
-
-
-
-<!-- <div align="center">
-  <div class="row">
-    ### Profle Page
-    <img src="assets/screenshots/1.png" alt="Screenshot_1" style="width:20%">
-    <img src="assets/screenshots/2.png" alt="Screenshot_2" style="width:20%">
-    <img src="assets/screenshots/3.png" alt="Screenshot_3" style="width:20%">
-    <img src="assets/screenshots/4.png" alt="Screenshot_4" style="width:20%">
-  </div>
-  <br>
-  <div class="row">
-    <img src="assets/screenshots/5.png" alt="Screenshot_5" style="width:20%">
-    <img src="assets/screenshots/6.png" alt="Screenshot_6" style="width:20%">
-    <img src="assets/screenshots/7.png" alt="Screenshot_7" style="width:20%">
-    <img src="assets/screenshots/8.png" alt="Screenshot_8" style="width:20%">
-  </div>
-  <br>
-  <div class="row">
-    <img src="assets/screenshots/9.png" alt="Screenshot_9" style="width:20%">
-    <img src="assets/screenshots/10.png" alt="Screenshot_10" style="width:20%">
-    <img src="assets/screenshots/11.png" alt="Screenshot_11" style="width:20%">
-    <img src="assets/screenshots/12.png" alt="Screenshot_12" style="width:20%">
-  </div>
-  <br>
-  <div class="row">
-    <img src="assets/screenshots/13.png" alt="Screenshot_13" style="width:20%">
-    <img src="assets/screenshots/14.png" alt="Screenshot_14" style="width:20%">
-    <img src="assets/screenshots/15.png" alt="Screenshot_15" style="width:20%">
-    <img src="assets/screenshots/16.png" alt="Screenshot_16" style="width:20%">
-  </div>
-  
-</div> -->
 
 ## What next?
 * I might add a recommendation system to filter movies according to user preferences.
