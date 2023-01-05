@@ -1,4 +1,6 @@
 import 'package:a_movie/a_presentation/core/widgets/web_app_ground.dart';
+import 'package:a_movie/a_presentation/trailer_page/widgets/phone_yt_wg.dart';
+import 'package:a_movie/a_presentation/trailer_page/widgets/web_yt_wg.dart';
 import 'package:a_movie/b_application/movies_providers.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
@@ -8,7 +10,6 @@ import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
 
 import 'package:a_movie/c_domain/trailers_model.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class TrailersScreen extends ConsumerWidget {
@@ -82,19 +83,12 @@ class TrailersScreen extends ConsumerWidget {
   }
 
   Widget _buildTrailersWidget(TrailersModel data, BuildContext context) {
-    List<Video>? videos = data.trailers;
     return Stack(
       children: [
         Center(
-          child: YoutubePlayer(
-            controller: YoutubePlayerController(
-              initialVideoId: videos![0].key!,
-              flags: const YoutubePlayerFlags(
-                hideControls: true,
-                autoPlay: true,
-              ),
-            ),
-          ),
+          child: isPhonePlatform()
+              ? PhoneYouTubeWidget(data)
+              : WebYouTubeWidget(data),
         ),
         //close button
         Positioned(

@@ -1,7 +1,8 @@
 import 'package:a_movie/a_presentation/core/widgets/app_btn.dart';
-import 'package:a_movie/a_presentation/trailer_screen.dart';
+import 'package:a_movie/a_presentation/trailer_page/trailer_screen.dart';
 import 'package:a_movie/c_domain/movie/hive_movie_model.dart';
 import 'package:a_movie/c_domain/movie/movie_details_model.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -46,7 +47,10 @@ class _MovieActionsRowState extends State<MovieActionsRow> {
           ),
           text: 'Watch Trailer',
         ),
-        SizedBox(width: widget.size.width * 0.03),
+        SizedBox(
+            width: isPhone()
+                ? widget.size.width * 0.03
+                : screenWidth(widget.size) * 0.02),
         AppButton(
           height: widget.size.height * 0.055,
           flex: 3,

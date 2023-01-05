@@ -3,6 +3,7 @@ import 'package:a_movie/c_domain/genres/genres_model.dart';
 import 'package:a_movie/b_application/movies_providers.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,8 @@ class CategoryWidget extends ConsumerWidget {
                 );
               } else {
                 return SizedBox(
-                  height: size.height * 0.1,
+                  height:
+                      isPhone() ? size.height * 0.1 : screenHeight(size) * 0.14,
                   child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,

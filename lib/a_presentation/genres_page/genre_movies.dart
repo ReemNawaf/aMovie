@@ -2,6 +2,7 @@ import 'package:a_movie/a_presentation/home_page/widgets/movie_card_skeleton_wg.
 import 'package:a_movie/a_presentation/home_page/widgets/movie_card_wg.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
 import 'package:a_movie/b_application/movies_providers.dart';
@@ -48,9 +49,9 @@ class GenreMovies extends ConsumerWidget {
         scrollDirection: Axis.vertical,
         itemCount: 12,
         itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.only(right: 16),
+          padding: EdgeInsets.only(top: isPhone() ? 0.0 : 20.0, right: 16),
           child: MovieCardSkeletonWidget(
-            size: size * 1.35,
+            size: isPhone() ? size * 1.35 : size * 1.02,
           ),
         ),
       ),
@@ -95,11 +96,11 @@ class GenreMovies extends ConsumerWidget {
           scrollDirection: Axis.vertical,
           itemCount: movies.length,
           itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(top: isPhone() ? 0.0 : 20.0, right: 16),
             child: MovieCardWidget(
               movie: movies[index],
-              size: size * 1.35,
-              request: 'search',
+              size: isPhone() ? size * 1.35 : size * 1.02,
+              request: 'genres',
             ),
           ),
         ),

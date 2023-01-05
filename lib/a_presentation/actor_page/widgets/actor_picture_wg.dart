@@ -1,4 +1,5 @@
 import 'package:a_movie/shared/app_colors.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:flutter/material.dart';
 
 class ActorPictureWidget extends StatelessWidget {
@@ -13,8 +14,9 @@ class ActorPictureWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: size.width * 0.6,
-      height: size.height * 0.4,
+      margin: const EdgeInsets.only(right: 26.0, left: 26.0),
+      width: isPhone() ? size.width * 0.8 : screenWidth(size) * 0.8,
+      height: isPhone() ? size.height * 0.5 : screenWidth(size) * 0.8,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(30.0),

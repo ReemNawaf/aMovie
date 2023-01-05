@@ -26,7 +26,9 @@ class MoviesDetailsPage extends ConsumerWidget {
           height: screenHeight(size),
           child: Container(
             decoration: kBackgroundDec,
-            padding: EdgeInsets.only(top: size.height * 0.07),
+            padding: EdgeInsets.only(
+                top:
+                    isPhone() ? size.height * 0.07 : screenHeight(size) * 0.03),
             child: Column(
               children: [
                 const SimpleAppBar(title: 'Movie Details'),
@@ -40,7 +42,9 @@ class MoviesDetailsPage extends ConsumerWidget {
                         return buildErrorWidget(snapshot.data!.error);
                       } else {
                         return SizedBox(
-                          height: size.height * 0.878,
+                          height: isPhone()
+                              ? size.height * 0.878
+                              : screenHeight(size) * 0.91,
                           child: MovieDetailsWidget(
                             size: size,
                             movie: snapshot.data!,

@@ -1,4 +1,5 @@
 import 'package:a_movie/shared/app_colors.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:flutter/material.dart';
 import 'package:a_movie/c_domain/genres/genres_model.dart';
 import 'package:a_movie/a_presentation/genres_page/genre_movies.dart';
@@ -53,8 +54,8 @@ class _GenreListsState extends State<GenreLists>
               isScrollable: true,
               tabs: widget.genres.map((Genre genre) {
                 return Container(
-                  padding: const EdgeInsets.only(
-                    bottom: 15,
+                  padding: EdgeInsets.only(
+                    bottom: isPhone() ? 15 : 5.0,
                     top: 10,
                   ),
                   child: Text(
@@ -69,7 +70,7 @@ class _GenreListsState extends State<GenreLists>
             ),
           ),
           SizedBox(
-            height: size.height * 0.834,
+            height: isPhone() ? size.height * 0.83 : screenHeight(size) * 0.85,
             child: TabBarView(
               controller: _tabController,
               physics: const NeverScrollableScrollPhysics(),

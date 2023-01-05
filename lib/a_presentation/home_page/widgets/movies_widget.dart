@@ -2,6 +2,7 @@ import 'package:a_movie/a_presentation/home_page/widgets/movie_card_skeleton_wg.
 import 'package:a_movie/a_presentation/home_page/widgets/movie_card_wg.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class MoviesWidget extends ConsumerWidget {
 
   Widget _buildLoadingWidget(Size size) {
     return SizedBox(
-      height: size.height * 0.27,
+      height: isPhone() ? size.height * 0.29 : screenHeight(size) * 0.35,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 3,
@@ -84,7 +85,7 @@ class MoviesWidget extends ConsumerWidget {
       );
     } else {
       return SizedBox(
-        height: size.height * 0.27,
+        height: isPhone() ? size.height * 0.29 : screenHeight(size) * 0.35,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: movies.length,

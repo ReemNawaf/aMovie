@@ -4,6 +4,7 @@ import 'package:a_movie/b_application/movies_providers.dart';
 import 'package:a_movie/c_domain/movie/movie_model.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +29,8 @@ class SearchMoviesWidget extends ConsumerWidget {
               snapshot.data!.error!.isNotEmpty) {
             return _buildErrorWidget(snapshot.data!.error);
           } else {
-            return _buildMoviesWidget(data: snapshot.data!, size: size);
+            return _buildMoviesWidget(context,
+                data: snapshot.data!, size: size);
           }
         } else if (snapshot.hasError) {
           return _buildErrorWidget(snapshot.error);
@@ -65,7 +67,7 @@ Widget _buildLoadingWidget(Size size) {
 
 Widget _buildErrorWidget(dynamic error) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: kHorPad),
+    padding: const EdgeInsets.symmetric(horizontal: kHorPad, vertical: 20.0),
     child: Text(
       'Oops, movie list couldn\'t be loaded, check your internect connection.',
       textAlign: TextAlign.center,
@@ -76,7 +78,8 @@ Widget _buildErrorWidget(dynamic error) {
   );
 }
 
-Widget _buildMoviesWidget({required MovieModel data, required Size size}) {
+Widget _buildMoviesWidget(BuildContext context,
+    {required MovieModel data, required Size size}) {
   List<Movie>? movies = data.movies;
   if (movies!.isEmpty) {
     return Container(
@@ -88,7 +91,7 @@ Widget _buildMoviesWidget({required MovieModel data, required Size size}) {
     );
   } else {
     return SizedBox(
-      height: size.height * 0.744,
+      height: isPhone() ? size.height * 0.744 : screenHeight(size) * 0.87,
       child: GridView.builder(
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -100,10 +103,10 @@ Widget _buildMoviesWidget({required MovieModel data, required Size size}) {
         scrollDirection: Axis.vertical,
         itemCount: movies.length,
         itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.only(right: 16),
+          padding: EdgeInsets.only(top: isPhone() ? 0.0 : 20.0, right: 16),
           child: MovieCardWidget(
             movie: movies[index],
-            size: size * 1.35,
+            size: isPhone() ? size * 1.35 : size * 1.2,
             request: 'search',
           ),
         ),

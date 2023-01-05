@@ -1,6 +1,7 @@
 import 'package:a_movie/a_presentation/search_movies_page/widgets/search_movies_wg.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/text_field.dart';
 import 'package:a_movie/shared/txt_style.dart';
@@ -31,8 +32,11 @@ class SearchMoviesPageState extends State<SearchMoviesPage> {
       child: Column(
         children: [
           Container(
-            padding:
-                const EdgeInsets.only(left: kHorPad, right: kHorPad, top: 80.0),
+            padding: EdgeInsets.only(
+              left: kHorPad,
+              right: kHorPad,
+              top: isPhone() ? 80.0 : 40.0,
+            ),
             child: TextFormField(
               controller: searchKeyController,
               style: kSubheadStyle.copyWith(fontWeight: FontWeight.w600),

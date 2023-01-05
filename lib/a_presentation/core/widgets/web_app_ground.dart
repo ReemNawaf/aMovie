@@ -11,7 +11,7 @@ class WebAppGround extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return isPhone(screenSize)
+    return isPhone()
         ? child
         : Container(
             color: kPrimaryColors,
@@ -40,13 +40,16 @@ class WebAppGround extends StatelessWidget {
                     onTap: () => _launchURL(context),
                     child: RichText(
                       text: TextSpan(
-                        text: 'Built with Passion by',
-                        style: kSubheadStyle,
+                        text: 'Built with Passion by ',
+                        style: kSubheadStyle.copyWith(
+                            fontWeight: FontWeight.normal),
                         children: [
                           TextSpan(
                             text: 'Reem Almutairi',
                             style: kSubheadStyle.copyWith(
-                              color: kPrimaryColors,
+                              color: kPrimaryColors[400],
+                              decoration: TextDecoration.underline,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
                         ],
@@ -61,9 +64,9 @@ class WebAppGround extends StatelessWidget {
   }
 
   Future<void> _launchURL(BuildContext context) async {
-    const aBrainWebsiteUrl = 'https://reemnawaf.github.io/abrain';
-    await canLaunch(aBrainWebsiteUrl)
-        ? await launch(aBrainWebsiteUrl)
-        : throw 'Could not launch $aBrainWebsiteUrl';
+    Uri twitterAccountUrl = Uri.parse('https://mobile.twitter.com/reemnawaf');
+    await canLaunchUrl(twitterAccountUrl)
+        ? await launchUrl(twitterAccountUrl)
+        : throw 'Could not launch $twitterAccountUrl';
   }
 }

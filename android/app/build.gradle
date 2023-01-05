@@ -42,12 +42,12 @@ android {
     }
 
     defaultConfig {
-        multiDexEnabled true
         applicationId "com.example.a_movie"
         minSdkVersion localProperties.getProperty('flutter.minSdkVersion').toInteger()
         targetSdkVersion localProperties.getProperty('flutter.targetSdkVersion').toInteger()
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {

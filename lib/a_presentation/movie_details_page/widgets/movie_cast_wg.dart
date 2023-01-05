@@ -2,6 +2,7 @@ import 'package:a_movie/a_presentation/actor_page/actor_details_page.dart';
 import 'package:a_movie/c_domain/actors/actor_model.dart';
 import 'package:a_movie/shared/app_colors.dart';
 import 'package:a_movie/shared/constants.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,8 @@ class MovieCastWidget extends StatelessWidget {
           ),
           const SizedBox(height: 8.0),
           SizedBox(
-            height: size.height * 0.109,
+            height:
+                isPhone() ? size.height * 0.129 : screenStandardHight * 0.15,
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,

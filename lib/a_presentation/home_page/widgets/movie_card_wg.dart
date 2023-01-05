@@ -5,6 +5,7 @@ import 'package:a_movie/c_domain/movie/movie_details_model.dart';
 import 'package:a_movie/c_domain/movie/movie_model.dart';
 import 'package:a_movie/b_application/movies_providers.dart';
 import 'package:a_movie/shared/app_colors.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:a_movie/shared/ui_helpers.dart';
 import 'package:flutter/material.dart';
@@ -44,15 +45,17 @@ class MovieCardWidget extends StatelessWidget {
           ),
         );
       },
-      child: Padding(
+      child: Container(
+        height: isPhone() ? size.height * 0.4 : screenHeight(size) * 0.46,
         padding: const EdgeInsets.only(left: 16.0, top: 10.0, bottom: 10.0),
         child: Column(
           children: [
             Hero(
               tag: '${movie.id}$request',
               child: Container(
-                width: size.width * 0.3,
-                height: size.height * 0.2,
+                width: isPhone() ? size.width * 0.3 : screenWidth(size) * 0.3,
+                height:
+                    isPhone() ? size.height * 0.2 : screenHeight(size) * 0.26,
                 decoration: movie.poster != null
                     ? movieCardDec.copyWith(
                         image: DecorationImage(
@@ -92,7 +95,7 @@ class MovieCardWidget extends StatelessWidget {
             const SizedBox(height: 8),
             Container(
               alignment: Alignment.center,
-              width: size.width * 0.26,
+              width: isPhone() ? size.width * 0.28 : screenWidth(size) * 0.35,
               child: Text(
                 movie.title!.trim(),
                 textAlign: TextAlign.center,

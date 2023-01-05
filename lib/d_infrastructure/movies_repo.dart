@@ -1,11 +1,13 @@
 import 'package:a_movie/c_domain/actors/actor_model.dart';
 import 'package:a_movie/environment_config.dart';
+import 'package:a_movie/shared/app_colors.dart';
 import 'package:dio/dio.dart';
 import 'package:a_movie/c_domain/genres/genres_model.dart';
 import 'package:a_movie/c_domain/movie/movie_details_model.dart';
 import 'package:a_movie/c_domain/movie/movie_model.dart';
 import 'package:a_movie/c_domain/reviews_model.dart';
 import 'package:a_movie/c_domain/trailers_model.dart';
+import 'package:flutter/material.dart';
 
 //  get Now Playing Movies
 //  get Up cominging Movies
@@ -214,5 +216,20 @@ class MovieRepo {
 
     final movieGenresString = genres.map((gen) => gen.name).toList();
     return movieGenresString;
+  }
+
+  Future<Widget> getMoviePoster(String url) async {
+    try {
+      return Image.network(
+        url,
+        fit: BoxFit.cover,
+      );
+    } catch (error) {
+      return Image.asset(
+        'assets/icons/videocam-off-outline.png',
+        fit: BoxFit.contain,
+        color: kBlackColors[600],
+      );
+    }
   }
 }

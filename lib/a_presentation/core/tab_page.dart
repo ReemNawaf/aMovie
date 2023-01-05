@@ -36,6 +36,8 @@ class _TabPageState extends State<TabPage> {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: kBlackColors,
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
       body: WebAppGround(
         child: SizedBox(
           width: screenWidth(screenSize),
@@ -60,7 +62,7 @@ class _TabPageState extends State<TabPage> {
           getBottomNavigationBarItem(
             isSelected: 1 == selectedPageIndex,
             label: 'Explore',
-            iconName: 'category',
+            iconName: 'search',
           ),
           getBottomNavigationBarItem(
             isSelected: 2 == selectedPageIndex,

@@ -7,6 +7,7 @@ import 'package:a_movie/a_presentation/movie_details_page/widgets/poster_wg.dart
 import 'package:a_movie/a_presentation/movie_details_page/widgets/similar_movies_wg.dart';
 import 'package:a_movie/a_presentation/movie_details_page/widgets/reviews.dart';
 import 'package:a_movie/c_domain/movie/movie_details_model.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/strings.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,9 @@ class MovieDetailsWidget extends StatelessWidget {
                       fullImageURL: movie.details!.fullImgURL,
                     ),
                     SizedBox(
-                      height: size.height * 0.42,
+                      height: isPhone()
+                          ? size.height * 0.5
+                          : screenHeight(size) * 0.52,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -69,17 +72,29 @@ class MovieDetailsWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: size.height * 0.02),
+                SizedBox(
+                    height: isPhone()
+                        ? size.height * 0.02
+                        : screenHeight(size) * 0.02),
                 Text(movie.details!.title, style: kTitle3Style),
-                SizedBox(height: size.height * 0.02),
+                SizedBox(
+                    height: isPhone()
+                        ? size.height * 0.02
+                        : screenHeight(size) * 0.02),
                 MovieActionsRow(
                   context,
                   movie: movie.details!,
                   size: size,
                 ),
-                SizedBox(height: size.height * 0.025),
+                SizedBox(
+                    height: isPhone()
+                        ? size.height * 0.025
+                        : screenHeight(size) * 0.025),
                 OverviewWidget(overview: detail.overview),
-                SizedBox(height: size.height * 0.01),
+                SizedBox(
+                    height: isPhone()
+                        ? size.height * 0.01
+                        : screenHeight(size) * 0.01),
               ],
             ),
           ),

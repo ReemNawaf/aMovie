@@ -2,6 +2,7 @@ import 'package:a_movie/a_presentation/core/widgets/favorite_btn.dart';
 import 'package:a_movie/c_domain/movie/hive_movie_model.dart';
 import 'package:a_movie/c_domain/movie/movie_details_model.dart';
 import 'package:a_movie/shared/app_colors.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -28,8 +29,8 @@ class PosterWidget extends StatelessWidget {
     final isInFavoriteList = hiveList.contains(movie.id);
 
     return Container(
-      width: size.width * 0.6,
-      height: size.height * 0.4,
+      width: isPhone() ? size.width * 0.6 : screenWidth(size) * 0.52,
+      height: isPhone() ? size.height * 0.4 : screenHeight(size) * 0.5,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(30.0),

@@ -1,4 +1,5 @@
 import 'package:a_movie/shared/app_colors.dart';
+import 'package:a_movie/shared/measurements.dart';
 import 'package:a_movie/shared/txt_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -25,9 +26,10 @@ class MovieInfoBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
         border: Border.all(color: kWhiteColor),
       ),
-      width: size.width * 0.2,
-      height: size.width * 0.21,
+      width: isPhone() ? size.width * 0.2 : screenWidth(size) * 0.3,
+      height: isPhone() ? size.width * 0.21 : screenHeight(size) * 0.13,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset('assets/icons/$icon.svg'),
           const SizedBox(height: 2.0),

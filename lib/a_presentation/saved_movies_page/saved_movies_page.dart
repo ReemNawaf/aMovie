@@ -39,8 +39,17 @@ class SavedMoviesPage extends StatelessWidget {
                       Text('Watching List', style: kCalloutStyle),
                     ],
                   ),
-                  SizedBox(
-                    height: size.height * 0.75,
+                  Container(
+                    padding: isPhone()
+                        ? const EdgeInsets.all(0.0)
+                        : const EdgeInsets.only(
+                            top: 20.0,
+                            left: 20.0,
+                            right: 20.0,
+                          ),
+                    height: isPhone()
+                        ? size.height * 0.75
+                        : screenHeight(size) * 0.836,
                     width: size.width * 0.9,
                     child: TabBarView(
                       children: [

@@ -1,19 +1,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
+const screenStandardWidth = 320.0;
 const screenStandardHight = 700.0;
-const screenStandardWidth = 450.0;
 
 double screenWidth(Size screenSize) {
-  return isPhone(screenSize) ? screenSize.width : 0.5625 * screenStandardHight;
+  return isPhone() ? screenSize.width : 0.5625 * screenStandardHight;
 }
 
 double screenHeight(Size screenSize) {
-  return isPhone(screenSize) ? screenSize.height : screenStandardHight;
+  return isPhone() ? screenSize.height : screenStandardHight;
 }
 
-bool isPhone(Size screenSize) {
-  return screenSize.width <= screenStandardWidth;
+bool isPhone() {
+  return isPhonePlatform();
+  // return screenSize.width <= screenStandardWidth;
 }
 
 bool isPhonePlatform() {

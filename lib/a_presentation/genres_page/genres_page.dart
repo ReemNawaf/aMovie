@@ -26,7 +26,7 @@ class GenresPage extends ConsumerWidget {
           width: screenWidth(size),
           height: screenHeight(size),
           child: Container(
-            padding: const EdgeInsets.only(top: 60.0),
+            padding: EdgeInsets.only(top: isPhone() ? 60.0 : 24.0),
             decoration: kBackgroundDec,
             child: Column(
               children: [
@@ -60,7 +60,7 @@ class GenresPage extends ConsumerWidget {
 
   Widget _buildLoadingWidget(Size size) {
     return SizedBox(
-      height: size.height * 0.744,
+      height: isPhone() ? size.height * 0.744 : screenHeight(size) * 0.84,
       child: GridView.builder(
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
