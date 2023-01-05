@@ -36,10 +36,10 @@
 ## App Demo
 
 ### App APK File
-You can download the <a href="build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk" target="_blank">App APK file</a>
+You can download the <a href="build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk" target="\_blank">App APK file</a>
 
 ### Live Demo
-You can use the app directally from <a href="https://amovie-a161c.web.app/#/" target="_blank">This Live Demo</a>
+You can use the app directally from <a href="https://amovie-a161c.web.app/#/" target="\_blank">This Live Demo</a>
 
 ### Recorded Demo
 ![](assets/demo/recorded_demo.mp4)
