@@ -1,3 +1,4 @@
+
 <p align="center">
   
   <img src="assets/logo/logo.png" alt="Logo" width=150 height=150>
@@ -24,7 +25,6 @@
   </p>
 </p>
 
-
 ## Table of contents
 - [App Demo](#app-demo)
 - [To Start](#to-start)
@@ -36,18 +36,16 @@
 ## App Demo
 
 ### App APK File
-You can download the <a href="build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk" target="\_blank">App APK file</a>
+You can download the [App APK file](android/app-release.apk)
 
 ### Live Demo
-You can use the app directally from <a href="https://amovie-a161c.web.app/#/" target="\_blank">This Live Demo</a>
+You can use the app directally from [This Live Demo](https://amovie-a161c.web.app/#/)
 
 ### Recorded Demo
-![](assets/demo/recorded_demo.mp4)
-
+https://user-images.githubusercontent.com/32703659/210823920-bb7f6dc0-eb0f-4a8a-ae18-39136656cecc.mp4
 
 ## To Start
 This is a normal flutter app. You should follow the instructions in the [official documentation](https://flutter.io/docs/get-started/install).
-
 
 ## Screenshots
 | Home Page | User Profile | User Profile | Movies Page By Genres |
