@@ -27,9 +27,9 @@
 
 ## Table of contents
 - [App Demo](#app-demo)
-- [To Start](#to-start)
 - [Screenshots](#screenshots)
 - [Used technologies](#used-technologies)
+- [To Start](#to-start)
 - [What Next?](#what-next)
 - [Creator](#creators)
 
@@ -43,9 +43,6 @@ You can use the app directally from [This Live Demo](https://amovie-a161c.web.ap
 
 ### Recorded Demo
 https://user-images.githubusercontent.com/32703659/210823920-bb7f6dc0-eb0f-4a8a-ae18-39136656cecc.mp4
-
-## To Start
-This is a normal flutter app. You should follow the instructions in the [official documentation](https://flutter.io/docs/get-started/install).
 
 ## Screenshots
 | Home Page | User Profile | User Profile | Movies Page By Genres |
@@ -71,6 +68,9 @@ This is a normal flutter app. You should follow the instructions in the [officia
 * Dio for Http calls
 * Hive for local storage
 * Shimmer Animation
+
+## To Start
+This is a normal flutter app. You should follow the instructions in the [official documentation](https://flutter.io/docs/get-started/install).
 
 ## What Next?
 * I might add a recommendation system to filter movies according to user preferences.
