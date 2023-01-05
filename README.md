@@ -26,10 +26,24 @@
 
 
 ## Table of contents
+- [App Demo](#app-demo)
 - [To Start](#to-start)
-- [screenshots](#screenshots)
+- [Screenshots](#screenshots)
+- [Used technologies](#used-technologies)
 - [What Next?](#what-next)
 - [Creator](#creators)
+
+## App Demo
+
+### App APK File
+You can download the <a href="build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk" target="_blank">App APK file</a>
+
+### Live Demo
+You can use the app directally from <a href="https://amovie-a161c.web.app/#/" target="_blank">This Live Demo</a>
+
+### Recorded Demo
+![](assets/demo/recorded_demo.mp4)
+
 
 ## To Start
 This is a normal flutter app. You should follow the instructions in the [official documentation](https://flutter.io/docs/get-started/install).
@@ -52,8 +66,15 @@ This is a normal flutter app. You should follow the instructions in the [officia
 | ----------- | ----------- | ----------- | ----------- |
 |<img src="assets/screenshots/13.png" width="250">|<img src="assets/screenshots/14.png" width="250">|<img src="assets/screenshots/15.png" width="250">|<img src="assets/screenshots/16.png" width="250">
 
+## Used Technologies
+* Dart language
+* Flutter Framework
+* Riverpod for state managment
+* Dio for Http calls
+* Hive for local storage
+* Shimmer Animation
 
-## What next?
+## What Next?
 * I might add a recommendation system to filter movies according to user preferences.
 
 ## Creators
